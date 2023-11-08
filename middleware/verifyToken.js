@@ -22,7 +22,7 @@ verifyAndAuthorisation = (req, res, next) => {
         if(req.user.userType === "Client" || req.user.userType === "Vendor" || req.user.userType === "Admin" || req.user.userType === "Driver"){
             next();
         }else{
-            res.status(403).json({status : false, message : " You are not authorised"})
+            res.status(403).json({status : false, message : "You are not authorised"})
         }
     })
 }
@@ -32,7 +32,7 @@ verifyVendor = (req, res, next) => {
         if(req.user.userType === "Vendor" || req.user.userType === "Admin"){
             next();
         }else{
-            res.status(403).json({status : false, message : " You are not authorised"})
+            res.status(403).json({status : false, message : "You are not authorised"})
         }
     })
 }
@@ -42,7 +42,7 @@ verifyDriver = (req, res, next) => {
         if(req.user.userType === "Driver" || req.user.userType === "Admin"){
             next();
         }else{
-            res.status(403).json({status : false, message : " You are not authorised"})
+            res.status(403).json({status : false, message : "You are not authorised"})
         }
     })
 }
@@ -52,7 +52,7 @@ verifyAdmin = (req, res, next) => {
         if(req.user.userType === "Admin"){
             next();
         }else{
-            res.status(403).json({status : false, message : " You are not authorised"})
+            res.status(403).json({status : false, message : "You are not authorised"})
         }
     })
 }
